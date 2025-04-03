@@ -15,6 +15,8 @@ public class SeeForm {
     public SeeForm(DataTask dataTask) {
         this.dataTask = dataTask;
         updateTable();
+        rootPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+
     }
 
     public void updateTable() {

@@ -34,6 +34,10 @@ public class TaskDoneForm extends JFrame {
         deadlineTask.setText(task.getTaskDate());
         descTask.setText(task.getTaskDesc());
 
+        namaTask.setEditable(false);
+        deadlineTask.setEditable(false);
+        descTask.setEditable(false);
+
         // Menampilkan prioritas sebagai label (tidak bisa diedit)
         kepentinganLabel.setText("Prioritas: " + task.getTaskAwr());
 

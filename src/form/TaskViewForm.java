@@ -31,6 +31,10 @@ public class TaskViewForm extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
+        namaTask.setDocument(new LimitPlainDocument(20));
+        deadlineTask.setDocument(new LimitPlainDocument(20));
+        descTask.setDocument(new LimitPlainDocument(75));
+
         // Isi form dengan data task
         namaTask.setText(task.getTaskName());
         deadlineTask.setText(task.getTaskDate());

@@ -19,6 +19,10 @@ public class CreateForm extends JFrame {
         setLocationRelativeTo(null);
         setContentPane(rootPanel);
 
+        namaTugas.setDocument(new LimitPlainDocument(20));
+        deadline.setDocument(new LimitPlainDocument(20));
+        descTugas.setDocument(new LimitPlainDocument(75));
+
         initKepentinganComboBox();
 
         simpanButton.addActionListener(e -> simpanTugas());
