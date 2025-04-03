@@ -47,7 +47,7 @@ public class TaskViewForm extends JFrame {
         finishBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                task.setTaskDone();
+                task.setTaskDone(true);
                 JOptionPane.showMessageDialog(null, "Tugas ditandai sebagai selesai!");
                 seeForm.updateTable(); // Perbarui tabel di SeeForm
                 dispose(); // Tutup form setelah aksi selesai

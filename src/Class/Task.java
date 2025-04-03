@@ -21,8 +21,8 @@ public class Task {
         this.taskIsDone = false;
     }
 
-    public void setTaskDone(){
-        this.taskIsDone = true;
+    public void setTaskDone(boolean taskDone){
+        this.taskIsDone = taskDone;
     }
 
     public void setTaskName(String taskName){

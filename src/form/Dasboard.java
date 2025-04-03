@@ -13,8 +13,8 @@ public class Dasboard extends JFrame {
     private CardLayout cardLayout;
     private DataTask dataTask;
 
-    public Dasboard() {
-        super("Dashboard Tugas");
+    public Dasboard(DataTask dataTask) {
+        super("To do list");
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -26,8 +26,15 @@ public class Dasboard extends JFrame {
             return; // Hindari error lebih lanjut
         }
 
-        dataTask = new DataTask();
+        this.dataTask = dataTask;
 
+        initComponents();
+
+        setContentPane(panel1); // Menggunakan panel utama dari GUI Designer
+        setVisible(true);
+    }
+
+    private void initComponents(){
         // Atur CardLayout untuk cardPanel
         cardLayout = new CardLayout();
         cardPanel.setLayout(cardLayout);
@@ -41,11 +48,8 @@ public class Dasboard extends JFrame {
         // Event tombol navigasi
         tambahTugasBtn.addActionListener(e -> cardLayout.show(cardPanel, "Tambah"));
         lihatTugasBtn.addActionListener(e -> {
-                    panelLihat.updateTable();
-                    cardLayout.show(cardPanel, "Lihat");
-                });
-
-        setContentPane(panel1); // Menggunakan panel utama dari GUI Designer
-        setVisible(true);
+            panelLihat.updateTable();
+            cardLayout.show(cardPanel, "Lihat");
+        });
     }
 }

@@ -34,7 +34,7 @@ public class SeeForm {
                     task.getTaskName(),
                     task.getTaskDate(),
                     task.getTaskAwr(),
-                    task.isTaskDone() ? "✓" : "✗",
+                    task.isTaskDone() ? "Selesai" : "Belum Selesai",
                     "Lihat" // Placeholder untuk tombol
             });
         }
