@@ -10,11 +10,14 @@ public class SeeForm {
     private JPanel rootPanel;
     private JTable taskTable;
     private JScrollPane scrollPane;
+    private JLabel seeFormLabel;
     private DataTask dataTask;
 
     public SeeForm(DataTask dataTask) {
         this.dataTask = dataTask;
         updateTable();
+        seeFormLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        seeFormLabel.setBorder(BorderFactory.createEmptyBorder(0,0,10,0));
         rootPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
     }

@@ -20,16 +20,16 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="2660b" class="javax.swing.JButton" binding="tambahTugasBtn">
-            <constraints/>
-            <properties>
-              <text value="Tambah Tugas"/>
-            </properties>
-          </component>
           <component id="f37e9" class="javax.swing.JButton" binding="lihatTugasBtn">
             <constraints/>
             <properties>
               <text value="Lihat Tugas"/>
+            </properties>
+          </component>
+          <component id="2660b" class="javax.swing.JButton" binding="tambahTugasBtn">
+            <constraints/>
+            <properties>
+              <text value="Tambah Tugas"/>
             </properties>
           </component>
         </children>

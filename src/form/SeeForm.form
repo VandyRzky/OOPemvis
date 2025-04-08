@@ -18,6 +18,12 @@
           </component>
         </children>
       </scrollpane>
+      <component id="1bcc0" class="javax.swing.JLabel" binding="seeFormLabel">
+        <constraints border-constraint="North"/>
+        <properties>
+          <text value="Daftar tugas"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

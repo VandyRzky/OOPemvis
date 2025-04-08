@@ -42,8 +42,8 @@ public class Dasboard extends JFrame {
         // Buat halaman "Tambah" dan "Lihat"
         CreateForm panelTambah = new CreateForm(dataTask);
         SeeForm panelLihat = new SeeForm(dataTask);
-        cardPanel.add(panelTambah.getRootPanel(), "Tambah");
         cardPanel.add(panelLihat.getRootPanel(), "Lihat");
+        cardPanel.add(panelTambah.getRootPanel(), "Tambah");
 
         // Event tombol navigasi
         tambahTugasBtn.addActionListener(e -> cardLayout.show(cardPanel, "Tambah"));
