@@ -3,8 +3,6 @@ package App;
 import Class.*;
 import form.Dasboard;
 
-import javax.swing.*;
-import form.*;
 
 public class App {
 

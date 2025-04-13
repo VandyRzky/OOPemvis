@@ -23,14 +23,14 @@ public class Dasboard extends JFrame {
         System.out.println("cardPanel: " + cardPanel);
         if (cardPanel == null) {
             System.err.println("Error: cardPanel belum diinisialisasi di GUI Designer!");
-            return; // Hindari error lebih lanjut
+            return;
         }
 
         this.dataTask = dataTask;
 
         initComponents();
 
-        setContentPane(panel1); // Menggunakan panel utama dari GUI Designer
+        setContentPane(panel1);
         setVisible(true);
     }
 

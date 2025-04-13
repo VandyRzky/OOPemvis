@@ -42,10 +42,10 @@ public class SeeForm {
             });
         }
 
-        // Set model tabel
+
         taskTable.setModel(model);
 
-        // Terapkan custom renderer dan editor untuk kolom "Lihat"
+
         taskTable.getColumn("Lihat").setCellRenderer(new ButtonRenderer());
         taskTable.getColumn("Lihat").setCellEditor(new ButtonEditor(new JCheckBox(), dataTask, taskTable, this));
     }

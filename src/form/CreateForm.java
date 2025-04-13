@@ -45,14 +45,6 @@ public class CreateForm extends JFrame {
             clearForm();
             dataTask.seeAllTask();
         }
-//        else {
-//            JOptionPane.showMessageDialog(this, "Tugas disimpan:\n" +
-//                    "Nama: " + nama + "\n" +
-//                    "Deadline: " + dueDate + "\n" +
-//                    "Deskripsi: " + desc + "\n" +
-//                    "Kepentingan: " + priority, "Sukses", JOptionPane.INFORMATION_MESSAGE);
-//            clearForm();
-//        }
 
 
     }
