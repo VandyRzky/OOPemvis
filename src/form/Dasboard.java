@@ -2,6 +2,8 @@ package form;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
+
 import Class.*;
 
 public class Dasboard extends JFrame {
@@ -15,6 +17,10 @@ public class Dasboard extends JFrame {
 
     public Dasboard(DataTask dataTask) {
         super("To do list");
+
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/iconLogo.png")));
+        setIconImage(icon.getImage());
+
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
