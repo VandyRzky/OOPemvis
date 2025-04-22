@@ -5,6 +5,7 @@ import Class.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class TaskViewForm extends JFrame {
     private JPanel rootPanel;
@@ -27,6 +28,8 @@ public class TaskViewForm extends JFrame {
         this.seeForm = seeForm;
 
         setTitle("Detail Tugas");
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/iconLogo.png")));
+        setIconImage(icon.getImage());
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -58,14 +61,23 @@ public class TaskViewForm extends JFrame {
         simpanButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Perbarui data task
-                task.setTaskName(namaTask.getText());
-                task.setTaskDate(deadlineTask.getText());
-                task.setTaskDesc(descTask.getText());
 
-                JOptionPane.showMessageDialog(null, "Perubahan tersimpan!");
-                seeForm.updateTable(); // Perbarui tabel di SeeForm
-                dispose(); // Tutup form setelah aksi selesai
+                String nama = namaTask.getText();
+                String dueDate = deadlineTask.getText();
+                String desc = descTask.getText();
+
+                if (nama.isEmpty() || dueDate.isEmpty() || desc.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Semua field harus diisi!", "Peringatan", JOptionPane.WARNING_MESSAGE);
+                }else{
+                    // Perbarui data task
+                    task.setTaskName(namaTask.getText());
+                    task.setTaskDate(deadlineTask.getText());
+                    task.setTaskDesc(descTask.getText());
+
+                    JOptionPane.showMessageDialog(null, "Perubahan tersimpan!");
+                    seeForm.updateTable(); // Perbarui tabel di SeeForm
+                    dispose(); // Tutup form setelah aksi selesai
+                }
             }
         });
 
