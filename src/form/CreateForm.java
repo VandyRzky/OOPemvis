@@ -41,6 +41,7 @@ public class CreateForm extends JFrame {
         if (nama.isEmpty() || dueDate.isEmpty() || desc.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Semua field harus diisi!", "Peringatan", JOptionPane.WARNING_MESSAGE);
         }else {
+            JOptionPane.showMessageDialog(null, "Tugas berhasil dibuat!");
             insertTask(nama, dueDate, desc, priority);
             clearForm();
             dataTask.seeAllTask();

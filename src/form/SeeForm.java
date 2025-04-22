@@ -26,7 +26,7 @@ public class SeeForm {
         // Ambil data dari DataTask
         ArrayList<Task> taskList = dataTask.getTasks();
 
-        String[] columnNames = {"Nama Tugas", "Tanggal", "Prioritas", "Selesai", "Lihat"};
+        String[] columnNames = {"Nama Tugas", "Tenggat", "Prioritas", "Selesai", "Lihat"};
 
         // Buat model tabel
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);

@@ -5,6 +5,7 @@ import Class.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class TaskDoneForm extends JFrame {
     private JPanel rootPanel;
@@ -25,6 +26,8 @@ public class TaskDoneForm extends JFrame {
         this.seeForm = seeForm;
 
         setTitle("Detail Tugas");
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/iconLogo.png")));
+        setIconImage(icon.getImage());
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
