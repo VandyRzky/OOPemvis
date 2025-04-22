@@ -2,6 +2,9 @@ package App;
 
 import Class.*;
 import form.Dasboard;
+import form.SplashScreen;
+
+import javax.swing.*;
 
 
 public class App {
@@ -9,13 +12,27 @@ public class App {
     public static void main(String[] args) {
         DataTask dataTask = new DataTask();
 
-        // Tambahkan shutdown hook agar data tersimpan saat program dihentikan
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("Program ditutup, menyimpan data ke database...");
             dataTask.saveDataToDatabase();
         }));
 
-        // Jalankan aplikasi GUI
-        new Dasboard(dataTask);
+        SplashScreen splash = new SplashScreen();
+        splash.setVisible(true);
+
+        // Delay beberapa detik
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        splash.setVisible(false);
+        splash.dispose();         // Hapus splash
+
+        // Tampilkan aplikasi utama
+        SwingUtilities.invokeLater(() -> {
+            new Dasboard(dataTask);
+        });
     }
 }
