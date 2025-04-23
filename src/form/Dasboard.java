@@ -16,7 +16,7 @@ public class Dasboard extends JFrame {
     private DataTask dataTask;
 
     public Dasboard(DataTask dataTask) {
-        super("To do list");
+        super("e-Tugas");
 
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/res/iconLogo.png")));
         setIconImage(icon.getImage());
