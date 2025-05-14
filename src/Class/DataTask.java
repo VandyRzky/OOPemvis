@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import Database.DatabaseConnection;
 import java.sql.*;
 
-public class DataTask {
-    ArrayList <Task> dataTask = new ArrayList<Task>();
+public class DataTask extends Data {
+    final ArrayList <Task> dataTask = new ArrayList<Task>();
 
     public DataTask(){
         loadDataFromDatabase();
@@ -15,6 +15,7 @@ public class DataTask {
         this.dataTask.add(taskTemp);
     }
 
+    @Override
     public void loadDataFromDatabase() {
         try (Connection conn = DatabaseConnection.getConnection();
              Statement stmt = conn.createStatement();
@@ -44,6 +45,7 @@ public class DataTask {
         }
     }
 
+    @Override
     public void saveDataToDatabase() {
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(
@@ -71,6 +73,18 @@ public class DataTask {
             System.out.println(i + ".------------------------------");
             System.out.println(value);
             i++;
+        }
+        System.out.println("--------------------------------");
+    }
+
+    public void seeAllTask(String priority) {
+        int i = 1;
+        for (Task value : dataTask){
+            if (value.getTaskAwr().equalsIgnoreCase(priority)) {
+                System.out.println(i + ".------------------------------");
+                System.out.println(value);
+                i++;
+            }
         }
         System.out.println("--------------------------------");
     }
