@@ -1,6 +1,6 @@
 package Class;
 
-public class Task {
+public class Task implements TaskInterface {
     private String taskName;
     private String taskDate;
     private String taskDesc;
